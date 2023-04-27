@@ -22,8 +22,8 @@ app.use(express.static("public"));
 //routes
 
 app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "public/notes.html"))
-});
+    res.sendFile(path.join(__dirname, "/notes"))
+})
 
 app.get("/api/notes", (req, res) => {
     fs.readFile("db/db.json", (err, data) => {
@@ -33,7 +33,7 @@ app.get("/api/notes", (req, res) => {
     })
 });
 //creat id for incoming data all the data
-app.post(`/api/notes/`,(req,res)=>{
+app.post(`/api/notes`,(req,res)=>{
     fs.readFile("db/db.json",(err,data)=>{
         if(err) throw err;
         const parsedData = JSON.parse(data);
@@ -51,7 +51,7 @@ app.post(`/api/notes/`,(req,res)=>{
 });
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "public/index.html"))
+    res.sendFile(path.join(__dirname, "/index"))
 });
 //add id to database 
 app.delete(`/api/notes/:id`,(req,res)=>{
