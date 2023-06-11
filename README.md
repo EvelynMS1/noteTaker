@@ -37,7 +37,7 @@ The motivation in building this app was to connect both my knowledge of front en
 
 
 ## Features
-Provideds functionality of adding new notes and saving to list of notes which can then be previewed aswekk as deleting notes.
+Provideds functionality of adding new notes and saving to list of notes which can then be previewed as well as deleting notes.
 
 
 ## How-to-Contribute
